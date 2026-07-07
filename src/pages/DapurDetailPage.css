@@ -1,0 +1,97 @@
+.menu-item-interactive {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.menu-item-interactive:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Perbaikan UI untuk Kontrol Kuantitas */
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden; /* Penting untuk menggabungkan sudut */
+}
+
+.quantity-control button,
+.quantity-control .order-button {
+  height: 40px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.quantity-control button {
+  width: 40px;
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+}
+
+.quantity-control button:hover {
+  background-color: #f7f7f7;
+}
+
+.quantity-control input {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  border: none;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.quantity-control input::-webkit-outer-spin-button,
+.quantity-control input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-control .order-button {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0 1.25rem; /* Memberi ruang lebih untuk teks dan ikon */
+  white-space: nowrap;
+}
+
+.quantity-control .order-button:hover {
+  background-color: #e55337;
+}
+
+.delete-button-menu {
+  margin-left: auto;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  transition: background-color 0.2s;
+}
+
+.delete-button-menu:hover {
+  background-color: #c82333;
+}
+

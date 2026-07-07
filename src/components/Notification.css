@@ -1,0 +1,36 @@
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transform: translateX(120%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+}
+
+.notification-container.show {
+  transform: translateX(0);
+}
+
+/* Tipe notifikasi */
+.notification-container.success {
+  background-color: #4CAF50; /* Hijau untuk sukses */
+}
+
+.notification-container.error {
+  background-color: #f44336; /* Merah untuk error */
+}
+
+.notification-container.info {
+  background-color: #2196F3; /* Biru untuk info */
+}
+
+.notification-container p {
+  margin: 0;
+}

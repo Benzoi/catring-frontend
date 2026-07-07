@@ -1,0 +1,45 @@
+.dapur-list-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .dapur-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .dapur-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: white;
+  }
+  
+  .dapur-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dapur-card h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .dapur-card p {
+    color: #666;
+  }
+  
+  .dapur-card small {
+    color: #999;
+    font-style: italic;
+  }
+
+  .dapur-card-link {
+    text-decoration: none;
+    color: inherit;
+  }

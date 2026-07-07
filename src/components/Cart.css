@@ -1,0 +1,25 @@
+/* ... (semua style lain yang sudah ada) ... */
+
+.cart-quantity-control {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  
+  .cart-quantity-control button {
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--color-border);
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cart-quantity-control span {
+    margin: 0 0.75rem;
+    font-weight: 700;
+  }
+  

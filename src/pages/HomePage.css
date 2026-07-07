@@ -1,0 +1,210 @@
+/* HomePage.css */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFBF0; /* Warna dasar krem premium */
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+/* ================= HERO SECTION ================= */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 4rem;
+  color: #EA580C; /* Oranye khas CATring */
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 450px;
+}
+
+.hero-question {
+  font-size: 2.2rem;
+  color: #1E293B;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* Kotak Pencarian */
+.search-box {
+  display: flex;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 8px 25px rgba(234, 88, 12, 0.15);
+  border-radius: 50px;
+  overflow: hidden;
+  background: white;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.search-box:focus-within {
+  border: 2px solid #FDBA74;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.search-button {
+  background-color: #EA580C;
+  color: white;
+  border: none;
+  padding: 0 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.search-button:hover {
+  background-color: #C2410C;
+}
+
+.search-button:active {
+  transform: scale(0.95);
+}
+
+/* Animasi Maskot Mengambang */
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-mascot {
+  max-width: 450px;
+  width: 100%;
+  border-radius: 50%; /* Membuat gambar agak membulat */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  animation: floatMascot 4s ease-in-out infinite;
+}
+
+@keyframes floatMascot {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+
+/* ================= POPULAR SECTION ================= */
+.popular-section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #1E293B;
+  margin-bottom: 2rem;
+  border-left: 8px solid #EA580C;
+  padding-left: 1rem;
+}
+
+.kitchen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Desain Kartu Dapur */
+.kitchen-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  border: 1px solid #f1f5f9;
+}
+
+.kitchen-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(234, 88, 12, 0.1);
+}
+
+/* Background Placeholder Makanan */
+.kitchen-image {
+  height: 220px;
+  width: 100%;
+}
+.bg-gradient-1 { background: linear-gradient(135deg, #fde68a, #f59e0b); }
+.bg-gradient-2 { background: linear-gradient(135deg, #bbf7d0, #22c55e); }
+.bg-gradient-3 { background: linear-gradient(135deg, #fbcfe8, #ec4899); }
+
+.kitchen-info {
+  padding: 1.5rem;
+}
+
+.kitchen-info h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  color: #1E293B;
+  font-weight: 800;
+}
+
+.rating {
+  margin: 0 0 1.2rem 0;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Desain Label/Badge */
+.badge {
+  background-color: #FFEDD5;
+  color: #C2410C;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.diet-badge {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.premium-badge {
+  background-color: #fce7f3;
+  color: #be185d;
+}
+
+/* Responsivitas Layar Kecil (HP/Tablet) */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .section-title {
+    text-align: left;
+  }
+}
