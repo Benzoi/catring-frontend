@@ -10,7 +10,7 @@ const DaftarDapurPage = () => {
   useEffect(() => {
     const fetchDapurs = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/pembeli/dapurs');
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/pembeli/dapurs`);
         setDapurs(response.data);
       } catch (err) {
         console.error('Gagal mengambil data:', err);

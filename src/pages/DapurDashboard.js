@@ -29,7 +29,7 @@ const DapurDashboard = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const response = await axios.get('http://localhost:5001/api/dapur/menus', config);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/dapur/menus`, config);
       setMyMenus(response.data);
     } catch (error) {
       console.error('Gagal mengambil menu:', error);
@@ -69,7 +69,7 @@ const DapurDashboard = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      await axios.post('http://localhost:5001/api/dapur/menus', dataToSubmit, config);
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/dapur/menus`, dataToSubmit, config);
       showNotification('Menu berhasil ditambahkan!', 'success');
       
       // Refresh list dan bersihkan form
@@ -94,7 +94,7 @@ const DapurDashboard = () => {
               Authorization: `Bearer ${user.token}`,
             },
           };
-          await axios.delete(`http://localhost:5001/api/dapur/menus/${menuId}`, config);
+          await axios.delete(`${process.env.REACT_APP_API_URL}/api/dapur/menus/${menuId}`, config);
           showNotification('Menu berhasil dihapus.', 'success');
           fetchMyMenus();
         } catch (error) {

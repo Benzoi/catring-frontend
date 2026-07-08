@@ -26,7 +26,7 @@ const AdminDashboard = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get('http://localhost:5001/api/admin/users', config);
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/admin/users`, config);
       setUsers(data);
     } catch (error) {
       console.error('Gagal mengambil data pengguna:', error);
@@ -46,7 +46,7 @@ const AdminDashboard = () => {
         },
       };
       // Endpoint baru yang perlu kita buat di backend
-      const { data } = await axios.get('http://localhost:5001/api/admin/orders', config);
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/admin/orders`, config);
       setAdminOrders(data);
     } catch (error) {
       console.error('Gagal mengambil data pesanan admin:', error);

@@ -84,7 +84,7 @@ const DapurDetailPage = () => {
           'Expires': '0',
         },
       };
-      const response = await axios.get(`http://localhost:5001/api/pembeli/dapurs/${id}`, config);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/pembeli/dapurs/${id}`, config);
       setDapur(response.data);
     } catch (error) {
       console.error('Failed to fetch kitchen details', error);
@@ -103,7 +103,7 @@ const DapurDetailPage = () => {
             const config = {
                 headers: { Authorization: `Bearer ${user.token}` }
             };
-            await axios.delete(`http://localhost:5001/api/admin/menus/${menuId}`, config);
+            await axios.delete(`${process.env.REACT_APP_API_URL}/api/admin/menus/${menuId}`, config);
             showNotification('Menu deleted successfully.', 'success');
             fetchDapurDetail(); 
         } catch (error) {

@@ -20,7 +20,7 @@ const DapurOrdersPage = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get('http://localhost:5001/api/dapur/orders', config);
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/dapur/orders`, config);
       setOrders(data);
     } catch (error) {
       console.error("Gagal mengambil data pesanan:", error);
@@ -44,7 +44,7 @@ const DapurOrdersPage = () => {
           'Content-Type': 'application/json',
         },
       };
-      await axios.put(`http://localhost:5001/api/dapur/orders/${orderId}/status`, { status: newStatus }, config);
+      await axios.put(`${process.env.REACT_APP_API_URL}/api/dapur/orders/${orderId}/status`, { status: newStatus }, config);
       showNotification(`Status pesanan #${orderId} berhasil diubah menjadi ${newStatus}.`, 'success');
       fetchOrders(); // Panggil fetchOrders untuk me-refresh daftar pesanan
     } catch (error) {

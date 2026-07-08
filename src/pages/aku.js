@@ -13,7 +13,7 @@ const DapurDetailPage = () => {
     const fetchDapurDetail = async () => {
       try {
         // Panggil API untuk mendapatkan detail satu dapur berdasarkan ID
-        const response = await axios.get(`http://localhost:5001/api/pembeli/dapurs/${id}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/pembeli/dapurs/${id}`);
         setDapur(response.data);
       } catch (error) {
         console.error('Gagal mengambil detail dapur', error);

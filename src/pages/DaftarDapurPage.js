@@ -13,7 +13,7 @@ const DaftarDapurPage = () => {
     setLoading(true); // Set loading true setiap kali fetch dimulai
     try {
       // Tambahkan parameter query 'search' ke URL
-      const response = await axios.get(`http://localhost:5001/api/pembeli/dapurs?search=${term}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/pembeli/dapurs?search=${term}`);
       setDapurs(response.data);
     } catch (err) {
       console.error('Gagal mengambil data:', err);

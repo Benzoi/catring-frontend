@@ -39,7 +39,7 @@ const ProfilePage = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.put('http://localhost:5001/api/profile', formData, config);
+      const { data } = await axios.put(`${process.env.REACT_APP_API_URL}/api/profile`, formData, config);
       updateUser(data);
       showNotification('Profil berhasil diperbarui!', 'success');
     } catch (error) {
